@@ -1,0 +1,74 @@
+[
+    {
+        "domain": "l2mir.org",
+        "confidence_score": 7,
+        "create_time": 1301497528000,
+        "expired": false,
+        "family_ids": [],
+        "family_names": [],
+        "id": "fea9d8e416747803",
+        "ioc_salt_hash": "64c612fd2dbd3902",
+        "ioc_type": "domain",
+        "is_apt": false,
+        "key": "64c612fd2dbd3902",
+        "organization_ids": [],
+        "organization_names": [],
+        "risk_level": 4,
+        "tags_en": [
+            "c2",
+            "trojan"
+        ],
+        "threat_subtype": "Trojan",
+        "threat_type": "C2",
+        "update_time": 1621039819000,
+        "warn_name": "木马类回连"
+    },
+    {
+        "domain": "mediasprucetree.com",
+        "confidence_score": 7,
+        "create_time": 1487188840000,
+        "expired": false,
+        "family_ids": [],
+        "family_names": [],
+        "id": "86ff3aa52bc43d63",
+        "ioc_salt_hash": "bf69457ed4198c88",
+        "ioc_type": "domain",
+        "is_apt": false,
+        "key": "bf69457ed4198c88",
+        "organization_ids": [],
+        "organization_names": [],
+        "risk_level": 4,
+        "tags_en": [
+            "c2",
+            "trojan"
+        ],
+        "threat_subtype": "Trojan",
+        "threat_type": "C2",
+        "update_time": 1621909518000,
+        "warn_name": "木马类回连"
+    },
+    {
+        "domain": "api.ip.sb",
+        "confidence_score": 7,
+        "create_time": 1626196997000,
+        "expired": true,
+        "family_ids": [],
+        "family_names": [],
+        "id": "12538a046d3c381d",
+        "ioc_salt_hash": "bd1b642d96ea4242",
+        "ioc_type": "domain",
+        "is_apt": false,
+        "key": "bd1b642d96ea4242",
+        "organization_ids": [],
+        "organization_names": [],
+        "risk_level": 4,
+        "tags_en": [
+            "c2",
+            "RedLine_Stealer"
+        ],
+        "threat_subtype": "",
+        "threat_type": "C2",
+        "update_time": 1626981012750,
+        "warn_name": "普通远控木马活动事件"
+    }
+]
