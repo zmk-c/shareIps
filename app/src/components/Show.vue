@@ -13,6 +13,9 @@
           <span><strong>类型:</strong>{{ip.IocType}}</span><br>
           <span><strong>恶意标签:</strong>{{ip.Tags}}</span><br>
           <span><strong>威胁类型名:</strong>{{ip.WarnName}}</span><br>
+          <span><strong>国家:</strong>{{ip.Country}}</span><br>
+          <span><strong>城市/地区:</strong>{{ip.City}}</span><br>
+          <span><strong>服务代理商:</strong>{{ip.ISP}}</span><br>
         </div>
       </div>
       <div class="domain" v-show="domain">
@@ -22,6 +25,9 @@
           <span><strong>类型:</strong>{{domain.IocType}}</span><br>
           <span><strong>恶意标签:</strong>{{domain.Tags}}</span><br>
           <span><strong>威胁类型名:</strong>{{domain.WarnName}}</span><br>
+          <span><strong>国家:</strong>{{domain.Country}}</span><br>
+          <span><strong>城市/地区:</strong>{{domain.City}}</span><br>
+          <span><strong>服务代理商:</strong>{{domain.ISP}}</span><br>
         </div>
       </div>
       <div class="tunnel" v-show="tunnel">
@@ -31,6 +37,9 @@
           <span><strong>类型:</strong>{{tunnel.IocType}}</span><br>
           <span><strong>恶意标签:</strong>{{tunnel.Tags}}</span><br>
           <span><strong>威胁类型名:</strong>{{tunnel.WarnName}}</span><br>
+           <span><strong>国家:</strong>{{tunnel.Country}}</span><br>
+          <span><strong>城市/地区:</strong>{{tunnel.City}}</span><br>
+          <span><strong>服务代理商:</strong>{{tunnel.ISP}}</span><br>
         </div>
       </div>
     </ul>
@@ -38,7 +47,7 @@
 </template>
 
 <script>
-import ipArray from '../assets/ip.json';
+import ipArray from '../assets/ips.json';
 import domainArray from '../assets/domain.json'
 import tunnelArrray from '../assets/ipTunnel.json'
 import showContract from '../../../build/contracts/Share.json';
@@ -82,7 +91,7 @@ export default {
           // get accounts
           const accounts = await web3.eth.getAccounts();
           this.account = accounts[0];
-          console.log('this.account=>',this.account);
+          // console.log('this.account=>',this.account);
 
           this.storeIps();
           this.storeDomains();
@@ -95,7 +104,7 @@ export default {
       storeIps: async function() {
         const { store } = this.meta.methods;
         const ips = ipArray.map(item=>(
-          [item.ip,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name]
+          [item.ip,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name,item.counrty,item.city,item.isp]
         ))
         console.log(ips);
         await store(ips).send({from:this.account})
@@ -107,7 +116,7 @@ export default {
       storeDomains: async function() {
         const { storeDomain } = this.meta.methods;
         const domains = domainArray.map(item=>(
-          [item.domain,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name]
+          [item.domain,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name,item.counrty,item.city,item.isp]
         ))
         console.log(domains);
         await storeDomain(domains).send({from:this.account})
@@ -119,7 +128,7 @@ export default {
       storeTunnels: async function() {
         const { storeTunnel } = this.meta.methods;
         const tunnels = tunnelArrray.map(item=>(
-          [item.ip,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name]
+          [item.ip,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name,item.counrty,item.city,item.isp]
         ))
         console.log(tunnels);
         await storeTunnel(tunnels).send({from:this.account})
@@ -137,7 +146,10 @@ export default {
           Level: item[1],
           IocType: item[2],
           Tags: item[3],
-          WarnName: item[4]
+          WarnName: item[4],
+          Country: item[5],
+          City: item[6],
+          ISP: item[7]
         }))
       },
 
@@ -150,7 +162,10 @@ export default {
           Level: item[1],
           IocType: item[2],
           Tags: item[3],
-          WarnName: item[4]
+          WarnName: item[4],
+          Country: item[5],
+          City: item[6],
+          ISP: item[7]
         }))
       },
 
@@ -163,7 +178,10 @@ export default {
           Level: item[1],
           IocType: item[2],
           Tags: item[3],
-          WarnName: item[4]
+          WarnName: item[4],
+          Country: item[5],
+          City: item[6],
+          ISP: item[7]
         }))
       },
     };

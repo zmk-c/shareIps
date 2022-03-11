@@ -21,7 +21,10 @@
         "threat_subtype": "Trojan",
         "threat_type": "C2",
         "update_time": 1621039819000,
-        "warn_name": "木马类回连"
+        "warn_name": "木马类回连",
+        "country": "France",
+        "city": "Pedernec",
+        "isp": "OVH SAS"
     },
     {
         "domain": "mediasprucetree.com",
@@ -45,7 +48,10 @@
         "threat_subtype": "Trojan",
         "threat_type": "C2",
         "update_time": 1621909518000,
-        "warn_name": "木马类回连"
+        "warn_name": "木马类回连",
+        "country": "United States",
+        "city": "San Francisco",
+        "isp": "Cloudflare, Inc."
     },
     {
         "domain": "api.ip.sb",
@@ -69,6 +75,9 @@
         "threat_subtype": "",
         "threat_type": "C2",
         "update_time": 1626981012750,
-        "warn_name": "普通远控木马活动事件"
+        "warn_name": "普通远控木马活动事件",
+        "country": "Canada",
+        "city": "Montreal",
+        "isp": "Cloudflare, Inc."
     }
 ]
