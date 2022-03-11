@@ -44,8 +44,6 @@
         "risk_level": 4,
         "tags_en": [
             "c2",
-            "malware_CobaltStrike_Teamserver",
-            "malware_CobaltStrike_Teamserver",
             "malware_CobaltStrike_Teamserver"
         ],
         "threat_subtype": "",

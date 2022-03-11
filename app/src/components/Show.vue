@@ -104,7 +104,7 @@ export default {
       storeIps: async function() {
         const { store } = this.meta.methods;
         const ips = ipArray.map(item=>(
-          [item.ip,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name,item.counrty,item.city,item.isp]
+          [item.ip,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name,item.country,item.city,item.isp]
         ))
         console.log(ips);
         await store(ips).send({from:this.account})
@@ -116,7 +116,7 @@ export default {
       storeDomains: async function() {
         const { storeDomain } = this.meta.methods;
         const domains = domainArray.map(item=>(
-          [item.domain,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name,item.counrty,item.city,item.isp]
+          [item.domain,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name,item.country,item.city,item.isp]
         ))
         console.log(domains);
         await storeDomain(domains).send({from:this.account})
@@ -128,7 +128,7 @@ export default {
       storeTunnels: async function() {
         const { storeTunnel } = this.meta.methods;
         const tunnels = tunnelArrray.map(item=>(
-          [item.ip,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name,item.counrty,item.city,item.isp]
+          [item.ip,item.risk_level.toString(),item.ioc_type,item.tags_en.toString(),item.warn_name,item.country,item.city,item.isp]
         ))
         console.log(tunnels);
         await storeTunnel(tunnels).send({from:this.account})
@@ -233,24 +233,24 @@ a {
   /* border-style:solid;
   border-width:2px; */
   padding: 1%;
-  height: 120px;
-  width: 300px;
+  height: 180px;
+  width: 400px;
   margin: auto;
 }
 .domainInfo {
   /* border-style:solid;
   border-width:2px; */
   padding: 1%;
-  height: 120px;
-  width: 300px;
+  height: 180px;
+  width: 400px;
   margin: auto;
 }
 .tunnelInfo {
   /* border-style:solid;
   border-width:2px; */
   padding: 1%;
-  height: 120px;
-  width: 300px;
+  height: 180px;
+  width: 400px;
   margin: auto;
 }
 </style>
